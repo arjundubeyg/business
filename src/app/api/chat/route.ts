@@ -31,9 +31,11 @@ export async function POST(req: Request) {
       },
     });
   } catch (error) {
+    const _error = error; // Use _error instead of error
     return NextResponse.json(
-      { error: 'Failed to process request' },
-      { status: 500 }
+        { error: 'Failed to process request' },
+        { status: 500 }
     );
-  }
+}
+
 }
